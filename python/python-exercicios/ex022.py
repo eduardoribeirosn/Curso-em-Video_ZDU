@@ -1,0 +1,7 @@
+nomeC = input('Digite um Nome completo: ')
+print(nomeC.upper())
+print(nomeC.lower())
+blocosNome = nomeC.split()
+nomeJuntos = "".join(blocosNome)
+print(len(nomeJuntos))
+print(len(blocosNome[0]))
