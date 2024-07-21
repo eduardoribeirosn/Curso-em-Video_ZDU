@@ -1,0 +1,1 @@
+# Diferença do python para o JS, é ( else if ) vira ( elif )
