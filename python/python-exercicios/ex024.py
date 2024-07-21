@@ -1,7 +1,4 @@
-city = input('Digite uma cidade: ')
-grande = city.upper()
-onde = grande.find('SANTO')
-if(onde == 0):
-    print('Sim')
-else: 
-    print('Não')
+city = str(input('Digite uma cidade: ')).strip()
+cityc = city.upper()
+print(cityc[:6] == 'SANTO ')
+

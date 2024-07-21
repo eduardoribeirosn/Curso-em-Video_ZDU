@@ -14,3 +14,5 @@
 # rstrip tira todos os espaços da direita
 # split separa cada palavra em um bloco, transformando a varíavel em uma "lista" []
 # '-'.join(frase) = juntar uma lista de palavras com algo, no exemplo é o '-'
+
+# 'frase' in varíavel = retorna um valor booleano se a frase existir na varíavel
