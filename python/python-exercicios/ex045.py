@@ -1,27 +1,40 @@
-import random
+from random import randint
+from time import sleep
 print('\033[1;33m-=-=-=-\033[0;34m Jokenpô \033[1;33m-=-=-=-\033[m')
 escolhas = ['Pedra', 'Papel', 'Tesoura']
-pc = random.choice(escolhas)
+# Pode ser esse jeito ou pc = random.choice(escolhas)
+pc = randint(0, 2)
+print(escolhas[0])
 print('Escolha um: \n1 - Pedra\n2 - Papel\n3 - Tesoura')
 vc = int(input('R: '))
+print('JO')
+sleep(1)
+print('KEN')
+sleep(1)
+print('PO')
+sleep(1)
+print('-=' * 11)
+print('Computador jogou {}' .format(escolhas[pc]))
+print('Jogador jogou {}' .format(escolhas[vc - 1]))
+print('-=' * 11)
 if vc == 1:
-    if pc == 'Pedra':
+    if escolhas[pc] == escolhas[0]:
         print('Empate')
-    elif pc == 'Papel':
-        print('Perdeu')
-    elif pc == 'Tesoura':
-        print('Ganhou')
+    elif escolhas[pc] == escolhas[1]:
+        print('Computador Vence')
+    elif escolhas[pc] == escolhas[2]:
+        print('Jogador Venceu')
 elif vc == 2:
-    if pc == 'Pedra':
-        print('Ganhou')
-    elif pc == 'Papel':
+    if escolhas[pc] == escolhas[0]:
+        print('Jogador Venceu')
+    elif escolhas[pc] == escolhas[1]:
         print('Empate')
-    elif pc == 'Tesoura':
-        print('Perdeu')
+    elif escolhas[pc] == escolhas[2]:
+        print('Computador Vence')
 elif vc == 3:
-    if pc == 'Pedra':
-        print('Perdeu')
-    elif pc == 'Papel':
-        print('Ganhou')
-    elif pc == 'Tesoura':
+    if escolhas[pc] == escolhas[0]:
+        print('Computador Vence')
+    elif escolhas[pc] == escolhas[1]:
+        print('Jogador Venceu')
+    elif escolhas[pc] == escolhas[2]:
         print('Empate')

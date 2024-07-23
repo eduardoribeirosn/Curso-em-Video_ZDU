@@ -5,8 +5,11 @@ n2 = float(input('Digite sua segunda nota: '))
 print('Ok..')
 media = (n1 + n2) / 2
 if media < 5:
+    print('Com a nota {:.1f} e {:.1f} você teve a média {:.1f}' .format(n1, n2, media))
     print('\033[1;31mReprovado\033[m!!')
 elif media >= 5 and media < 7:
+    print('Com a nota {:.1f} e {:.1f} você teve a média {:.1f}' .format(n1, n2, media))
     print('\033[1;35mRecuperação\033[m!!')
 elif media >= 7:
+    print('Com a nota {:.1f} e {:.1f} você teve a média {:.1f}' .format(n1, n2, media))
     print('\033[1;32mAprovado\033[m!!')

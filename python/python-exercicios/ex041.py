@@ -5,12 +5,17 @@ cores = {
     'classe': '\033[1;34m',
 }
 if idade <= 9:
+    print('O atleta tem {} anos' .format(idade))
     print('Sua categoria é {}Mirim{}' .format(cores['classe'], cores['nd']))
 elif idade <= 14:
+    print('O atleta tem {} anos' .format(idade))
     print('Sua categoria é {}Infantil{}' .format(cores['classe'], cores['nd']))
 elif idade <=19:
+    print('O atleta tem {} anos' .format(idade))
     print('Sua categoria é {}Junior{}' .format(cores['classe'], cores['nd']))
 elif idade <=20:
+    print('O atleta tem {} anos' .format(idade))
     print('Sua categoria é {}Sênior{}' .format(cores['classe'], cores['nd']))
 else:
+    print('O atleta tem {} anos' .format(idade))
     print('Sua categoria é {}Master{}' .format(cores['classe'], cores['nd']))
