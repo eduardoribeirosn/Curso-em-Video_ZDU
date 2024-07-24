@@ -1,0 +1,10 @@
+n = int(input('Digite um número inteiro: '))
+cont = 1
+fibo = 1
+save = 0
+print('0', end=' ')
+while cont != n:
+    print('-> {}' .format(fibo), end=' ')
+    fibo = fibo + save
+    save = fibo - save
+    cont += 1
