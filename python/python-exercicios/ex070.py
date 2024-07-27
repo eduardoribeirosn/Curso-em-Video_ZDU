@@ -12,19 +12,15 @@ while True:
     total += preco
     if preco > 1000:
         maior += 1
-    if cont == 1:
+    if cont == 1 or preco < barato:
         barato = preco
         nomeBarato = nProduto
-    else:
-        if barato > preco:
-            barato = preco
-            nomeBarato = nProduto
     while option != 'S' and option != 'N':
         option = input('Quer continuar? (S/N) R: ').upper().strip()[0]
     if option == 'N':
-        print('\nFinalizando...\n')
+        print('\n{:~^40}\n' .format(' FIM DO PROGRAMA '))
         break
-    
+
 print(f'O total da compra foi R${total}')
 print(f'Temos {maior} produtos custando mais de R$1000')
 print(f'O produto mais barato foi "{nomeBarato}" que custa R${barato}')

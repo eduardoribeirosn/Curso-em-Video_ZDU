@@ -5,7 +5,7 @@ print('VAMOS JOGAR PAR OU IMPAR')
 print('=-' * 15)
 while True:
     # 1 = Par --- 2 = Impar
-    pcPI = randint(1, 2)
+    # pcPI = randint(1, 2)
     pcNum = randint(0, 9)
     vcPI = 'A'
     while vcPI != 'P' and vcPI != 'I':

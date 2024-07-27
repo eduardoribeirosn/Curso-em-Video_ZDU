@@ -5,7 +5,7 @@ while True:
     idade = int(input('Idade: '))
     if idade > 18:
         maior += 1
-    sexo = 'A'
+    sexo = ' '
     while sexo != 'M' and sexo != 'F':
         sexo = input('Sexo (M/F): ').upper().strip()[0]
     if sexo == 'M':
@@ -13,12 +13,10 @@ while True:
     if sexo == 'F':
         if idade < 20:
             fem20 += 1
-    option = 'A'
+    option = ' '
     while option != 'S' and option != 'N':
         option = input('Deseja cadastra mais alguém? (S/N)\nR: ').upper().strip()[0]
-    if option == 'S':
-        print('\n')
-    else:
+    if option == 'N':
         print('\nFinalizando...\n')
         break
 if maior == 1:
