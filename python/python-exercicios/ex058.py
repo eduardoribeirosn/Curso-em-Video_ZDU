@@ -11,8 +11,12 @@ while n != nt:
     cont += 1
     print('\nProcessando...\n')
     sleep(1)
+    if nt > n:
+            print('Menos...', end=' ')
+    elif nt < n:
+        print('Mais...', end=' ')
     if (nt != n):
-        print('Você errou!! Tente Novamente!')
+        print('Tente Novamente!')
 print('\033[1:32mParabéns\033[m, Você Acertou!!')
 if cont == 1:
     print('E precisou de {} chance' .format(cont))
