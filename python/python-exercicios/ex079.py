@@ -14,3 +14,4 @@ while True:
         break
 print('-=' * 30)
 print(f'Você digitou os valores {sorted(lista)}')
+# Caso queira usar o lista.sort(), não tem como usar no print.. tem que usar este comando sozinho, e depois poderá usar a LISTA normalmente, que ela estará em ordem númerica!

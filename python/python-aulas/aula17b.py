@@ -1,0 +1,1 @@
+# Caso queira copiar uma LISTA e passar para outra LISTA, lembre-se de usar o [:], na prática fica, galera.append(pessoa[:])

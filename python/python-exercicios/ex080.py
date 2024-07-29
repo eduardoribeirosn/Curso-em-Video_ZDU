@@ -13,3 +13,16 @@ for cont in range(1, 6):
 print('-=' * 30)
 print(f'Os valores digitados em ordem foram {lista}\n')
 
+# OUUUUUUUUUUUUUUUUU
+
+# listas = []
+# for cont in range(1, 6):
+#     n = int(input('Digite um valor: '))
+#     listas.append(n)
+#     listas.sort()
+#     if len(listas) - 1 == listas.index(n):
+#         print('Adicionado ao final da listas...')
+#     else:
+#         print(f'Adicionado na posição {listas.index(n)} da listas...')
+# print('-=' * 30)
+# print(f'Os valores digitados em ordem foram {listas}\n')

@@ -5,7 +5,9 @@ for cont in range(0, 5):
 print('-=' * 30)
 print(f'Você digitou os valores {lista}')
 print(f'O maior valor digitado foi {max(lista)} nas posições', end=' ')
-for maxi in range(0, len(lista)):
+for maxi in range(0, len(lista)): # OU form maxi in enumerate(lista):
+    # OU if v == maior:
+        # print(f'{maxi}...', end='')
     if lista[maxi] == max(lista):
         print(lista.index(max(lista), maxi), end='... ')
 print(f'\nO menor valor digitado foi {min(lista)} nas posições', end=' ')
