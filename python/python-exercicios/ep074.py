@@ -1,11 +1,7 @@
 from random import randint
-n1 = randint(0, 9)
-n2 = randint(0, 9)
-n3 = randint(0, 9)
-n4 = randint(0, 9)
-n5 = randint(0, 9)
-lista = (n1, n2, n3, n4, n5)
+lista = (randint(0, 9), randint(0, 9), randint(0, 9), randint(0, 9), randint(0, 9))
 print('\nOs valores sorteados foram', end=' ')
-print(f'{lista[0]} {lista[1]} {lista[2]} {lista[3]} {lista[4]}')
-print(f'O maior valor sorteado foi {sorted(lista)[4]}')
-print(f'O menor valor sorteado foi {sorted(lista)[0]}')
+for n in lista:
+    print(f'{n}', end=' ')
+print(f'\nO maior valor sorteado foi {max(lista)}')
+print(f'O menor valor sorteado foi {min(lista)}')
