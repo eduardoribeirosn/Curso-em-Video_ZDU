@@ -23,12 +23,12 @@ while True:
         break
 print('-=' * 30)
 print(f'Ao todo você cadastrou {len(galera)} pessoas.')
-print(f'O maior peso foi de {mai}. Peso de ', end=' ')
-for c, p in enumerate(galera):
-    if galera[c][1] == mai:
-        print(f'[{galera[c][0]}]', end=' ')
+print(f'O maior peso foi de {mai}Kg. Peso de ', end=' ')
+for c, p in enumerate(galera): # ou for p in galera:
+    if galera[c][1] == mai: # ou if p[1] == mai:
+        print(f'[{galera[c][0]}]', end=' ') # p[0]
 print()
-print(f'O menor peso foi de {men}. Peso de ', end=' ')
+print(f'O menor peso foi de {men}Kg. Peso de ', end=' ')
 for c, p in enumerate(galera):
     if galera[c][1] == men:
         print(f'[{galera[c][0]}]', end=' ')
