@@ -19,7 +19,7 @@ print(f'O campo nome tem o valor {jogador["Nome"]}.')
 print(f'O campo gols tem o valor {jogador["Gols"]}.')
 print(f'O campo total tem o valor {jogador["Total"]}.')
 print('-=' * 30)
-print(f'O jogador Joelson jogou {partidas} partidas.')
+print(f'O jogador Joelson jogou {partidas} partidas.') # ou len(jogador["Gols"])
 for c in range(0, partidas):
     print(f'    => Na partida {c + 1}, fez {jogador["Gols"][c]} gols.')
 print(f'Foi um total de {jogador["Total"]} gols.')
