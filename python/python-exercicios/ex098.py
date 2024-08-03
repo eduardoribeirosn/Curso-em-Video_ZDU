@@ -1,37 +1,43 @@
 from time import sleep
-def contagem():
+def contagem(I, F, P):
+    if P == 0:
+        P += 1
     print('-=' * 30)
-    print(f'Contagem de 1 até 10 de 1 em 1')
-    for cont in range(1, 10 + 1, 1):
-        print(f'{cont}',  end=' ')
-        # sleep(1)
+    print(f'Contagem de {I} até {F} de {P} em {P}')
+    if F < I:
+        if I > F:
+            if P > 0:
+                P *= (-1)
+    # if F < I and F >= 0 and P >= 0:
+    #     P *= -1
+    # if F >= 0 and F > I or F > I:
+    #     for cont in range(I, F + 1, P):
+    #         print(f'{cont}', end=' ')
+    #     print('FIM!')
+    # else:
+    #     for cont in range(I, F - 1, P):
+    #         print(f'{cont}', end=' ')
+    #     print('FIM!')
+    cont = I
+    sleep(2.5)
+    if I > F:
+        while cont >= F:
+            print(f'{cont}', end=' ', flush=True)
+            sleep(0.5)
+            cont += P
+    elif I < F:
+        while cont <= F:
+            print(f'{cont}', end=' ', flush=True)
+            sleep(0.5)
+            cont += P
     print('FIM!')
     print('-=' * 30)
-    print(f'Contagem de 10 até 0 de 2 em 2')
-    for cont in range(10, 0 -1, -2):
-        print(f'{cont} ', end=' ')
-        # sleep(1)
-    print('FIM!')
-    print('-=' * 30)
-    print('Agora é sua vez de personalizar a contagem!')
-    inicio = int(input(f'{"Início:":<8} '))
-    fim = int(input(f'{"Fim:":<8} '))
-    passo = int(input(f'{"Passo:":<8} '))
-    print('-=' * 30)
-    print(f'Contagem de {inicio} até {fim} de {passo} em {passo}')
-    if passo == 0:
-        passo += 1
-    if fim < 0:
-        if passo > 0:
-            passo *= (-1)
-    if fim < inicio and fim > 0 and passo >= 0:
-        passo *= -1
-    if fim >= 0 and fim > inicio:
-        for cont in range(inicio, fim + 1, passo):
-            print(f'{cont}', end=' ')
-        print('FIM!')
-    else:
-        for cont in range(inicio, fim - 1, passo):
-            print(f'{cont}', end=' ')
-        print('FIM!')
-contagem()
+
+
+
+contagem(1, 10, 1)
+contagem(10, 0, 2)
+contagem(int(input('Digite o começo: ')), int(input('Digite o Fim: ')), int(input('Digite o passo: ')))
+# contagem(5, -5, 0)
+# contagem(10, 20, 1)
+# contagem(20, 10, 1)

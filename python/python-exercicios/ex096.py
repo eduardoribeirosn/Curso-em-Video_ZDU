@@ -1,5 +1,5 @@
-def areat(L, C):
-    A = L * C
+def areat(larg, comp):
+    A = larg * comp
     print(f'A área de um terreno {L}x{C} é de {A}m².')
 
 
