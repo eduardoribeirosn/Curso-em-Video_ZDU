@@ -10,6 +10,4 @@ def leiaInt(text):
     return f'Você acabou de digitar o número {num}'
 
 
-print()
-print(leiaInt('Digite um número: '))
-print()
+print('\n', leiaInt('Digite um número: '), '\n')

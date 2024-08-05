@@ -5,28 +5,17 @@ def notas(* num, sit=False):
     :param sit: valor opcional, indicando se deve ou não adicionar a situação
     :return: dicionário com várias informações sobre a situação da turma.
     """
-    maior = menor = total = soma = 0
-    for valor in num:
-        if maior == 0:
-            maior = menor = valor
-        elif valor > maior:
-            maior = valor
-        elif valor < menor:
-            menor = valor
-        total += 1
-        soma += valor
-    media = soma / total
-    if media < 6:
+    if sum(num)/len(num) < 5:
         situacao = 'RUIM'
-    elif media < 7:
+    elif sum(num)/len(num) < 7:
         situacao = 'RAZOÁVEL'
     else:
         situacao = 'BOA'
     pessoa = {
-        'Total': total,
-        'Maior': maior,
-        'Menor': menor,
-        'Média': media,
+        'Total': len(num),
+        'Maior': max(num),
+        'Menor': min(num),
+        'Média': sum(num)/len(num),
     }
     if sit:
         pessoa['Situação'] = situacao
@@ -34,7 +23,8 @@ def notas(* num, sit=False):
     print('-' * 40)
     return pessoa
 
-# print()
-# print(notas(3.5, 2, 6.5, 2, 7, 4))
-# print()
-help(notas)
+
+print()
+print(notas(5.5, 2.5, 1.5, sit=True))
+print()
+# help(notas)

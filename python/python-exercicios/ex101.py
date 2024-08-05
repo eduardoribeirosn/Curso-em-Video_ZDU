@@ -1,7 +1,7 @@
-from datetime import date
-anoA = date.today().year
-def votos(voto):
-    idade = anoA - voto
+def votos(ano):
+    from datetime import date
+    anoA = date.today().year
+    idade = anoA - ano
     if idade < 16:
         return f'Com {idade} anos: NÃO VOTA.'
     elif idade < 18 or idade >= 65:

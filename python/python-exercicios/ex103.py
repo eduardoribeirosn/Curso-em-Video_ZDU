@@ -5,10 +5,14 @@ def ficha(jogador='<desconhecido>', gols=0):
 print()
 print('-' * 40)
 nome = str(input('Nome do Jogador: '))
-golsJ = input('Número de Gols: ')
-if nome == '' and golsJ == '':
+golsJ = str(input('Número de Gols: '))
+if golsJ.isnumeric():
+    int(golsJ)
+else:
+    golsJ = 0
+if nome.strip() == '' and golsJ == '':
     print(ficha())
-elif nome == '':
+elif nome.strip() == '':
     print(ficha(gols=golsJ))
 elif golsJ == '':
     print(ficha(jogador=nome))
