@@ -1,30 +1,28 @@
 def leiaInt(text):
-    num = input(text)
     while True:
-        if num.isnumeric():
-            int(num)
-            break
-        elif num == '':
-            num = 0
-            break
-        else:
+        try:
+            num = int(input(text))
+        except (ValueError, TypeError):
             print(f'\033[1;31mERRO! Digite um número inteiro válido.\033[m')
-            num = input(text)
-    return num
+            continue
+        except (KeyboardInterrupt):
+            print('\033[1;33mUsuário preferiu não digitar esse número.\033[m')
+            return 0
+        else:
+            return num
 
 def leiaReal(text):
-    num = input(text).strip().replace(',', '.')
     while True:
-        if num.isalpha():
+        try:
+            num = float(input(text))
+        except (ValueError, TypeError):
             print(f'\033[1;31mERRO! Digite um número Real válido.\033[m')
-            num = input(text).strip().replace(',', '.')
-        elif num == '':
-            num = 0
-            break
+            continue
+        except (KeyboardInterrupt):
+            print('\033[1;33mUsuário preferiu não digitar esse número.\033[m')
+            return 0
         else:
-            float(num)
-            break
-    return num
+            return num
 
 
 inteiro = leiaInt('Digite um Inteiro: ')
